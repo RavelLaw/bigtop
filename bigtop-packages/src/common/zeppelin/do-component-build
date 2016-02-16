@@ -22,11 +22,10 @@ BUILD_OPTS="-Divy.home=${HOME}/.ivy2 -Dsbt.ivy.home=${HOME}/.ivy2 -Duser.home=${
             -Drepo.maven.org=$IVY_MIRROR_PROP \
             -Dreactor.repo=file://${HOME}/.m2/repository \
             -Dignite.version=$IGNITE_HADOOP_VERSION \
-            -Pspark-1.5 -Dspark.version=$SPARK_VERSION \
             -Phadoop-2.6 -Dhadoop.version=$HADOOP_VERSION \
             -Pyarn \
             -Pbuild-distr"
-            
+
 if [ "$ZEPPELIN_RUN_TESTS" = "true" ]; then
   BUILD_OPTS="$BUILD_OPTS -DskipTests=false"
 else
